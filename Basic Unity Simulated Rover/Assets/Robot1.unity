@@ -460,6 +460,8 @@ GameObject:
   - component: {fileID: 286562553}
   - component: {fileID: 286562552}
   - component: {fileID: 286562551}
+  - component: {fileID: 286562554}
+  - component: {fileID: 286562555}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -542,6 +544,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286562554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286562550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acb6ecc8a329dd468b4c34866d59095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 286562552}
+  terrainDepth: 20
+  scale: 20
+--- !u!114 &286562555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286562550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034a7e46fffbc584f891849c51987b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 286562552}
+  wallHeight: 10
+  wallThickness: 1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +2048,7 @@ Transform:
   m_GameObject: {fileID: 1143390696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.51, y: 0.16, z: 66.68233}
+  m_LocalPosition: {x: 134.02, y: 8.6, z: 66.68233}
   m_LocalScale: {x: 0.5, y: 0.2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2039,8 +2071,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010e8cb26fcaaa143b1830686114fb01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrain: {fileID: 0}
+  offsetAboveTerrain: 0.5
   moveSpeed: 5
   turnSpeed: 100
+  stabilityThreshold: 45
 --- !u!54 &1143390705
 Rigidbody:
   m_ObjectHideFlags: 0
