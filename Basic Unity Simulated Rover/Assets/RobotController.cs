@@ -122,7 +122,7 @@ public class RobotController : MonoBehaviour
         }
     }
 
-    void ResetRobot()
+    public void ResetRobot()
     {
         // Reset the robot's position and rotation
         transform.position = initialPosition;
